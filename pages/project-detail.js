@@ -1,9 +1,17 @@
 import header from '../components/header'
-import {projects} from '../data'
-const projectDetail = () => `${header()} <h1>project detail</h1> 
-<div class = 'project-detail'>
-    ${projects[0].id}: ${projects[0].name};
+import { projects } from '../data'
+import {  router } from "../lib";
+const projectDetail = ({ data: { id }}) => {
+    const curentProjects = projects.find(project => project.id == id);
     
-</div>`;
-console.log(projects);
+    return `${header()} 
+    <h1>project detail</h1> 
+        <div class = 'project-detail'>
+            ${curentProjects.name}
+        </div>
+        <div>
+            <h2>Teams</h2>
+            ${curentProjects.teams}
+        </div>`
+}
 export default projectDetail;
