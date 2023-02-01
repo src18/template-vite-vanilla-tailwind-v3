@@ -9,9 +9,9 @@ import notFound from '../pages/notFound';
 
 const app = document.querySelector('#app');
 router.on("/", () => render(homePage, app));
-router.on("/post", () => render(() => postPage(), app));
-router.on("/projects", () => render(() => projects(), app));
+router.on("/post", () => render(postPage, app));
+router.on("/projects", () => render(projects, app));
 router.on("/contact", () => render(contact, app));
-router.on("/project-detail/:id", (params) => render(() => projectDetail(params), app));
+router.on("/project-detail/:id", ({data: {id}}) => render(() => projectDetail(id), app));
 router.notFound(render(notFound, app));
 router.resolve();

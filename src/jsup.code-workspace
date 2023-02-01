@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../jsup"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "we17307"
+  }
+}
