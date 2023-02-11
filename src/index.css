@@ -15,4 +15,7 @@ h1{
 a{
   @apply p-5
 }
+table.th{
+  @apply p-5
+}
  
